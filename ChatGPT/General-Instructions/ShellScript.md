@@ -14,7 +14,7 @@ These are general instructions for all shell scripts I will ask you to write. I 
 
 7. Add status message output as the script is working. Colorize the output, use red for errors and green for non error.
 
-8. Log all output to a file as well as standard out. Name the log file LOG-(PromptedScriptName)-MMDDYYYY-24hourtime.log. All log output to standard out and the log file should have timestamps in the format MM-DD-YYYY:24hourtime.
+8. Log all output to a file as well as standard out. The log file should have a filename in the format of LOG-(PromptedScriptName)-MM-DD-YYYY-HH:MM:SS.log. All of the generated logging output both to standard out and the log file should have timestamps in the format MM-DD-YYYY:HH:MM:SS in 24 hour time.
 
 9. Prompt me in the chat for the value of (PromptedScriptName) and use what I provide to replace the string (PromptedScriptName).
 
@@ -24,7 +24,7 @@ These are general instructions for all shell scripts I will ask you to write. I 
 
 12. Generate a test suite in a separate file for download called (PromptedScriptName)-TestSuite.
 
-13. Suffix all generated filenames with the current date and time in the format MM-DD-YYYY-HH:MM:SS.txt
+13. Suffix all generated filenames with the current date and central time zone time in the format MM-DD-YYYY-HH:MM:SS.txt
 
 14. Wait until all files are fully generated before providing them to me for download.
 
