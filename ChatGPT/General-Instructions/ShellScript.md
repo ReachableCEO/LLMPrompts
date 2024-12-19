@@ -2,7 +2,7 @@ These are general instructions for all shell scripts I will ask you to write. I 
 
 1. Add a copyright header for ReachableCEO Enterprises 2025
 
-2. Add a license header for AGPL v3.0 only.
+2. Add a full license header for AGPL v3.0 only.
 
 3. Do not use the canvas or the chat for output. Do not explain the code in the chat, output it to a file for download. Explain the code in comments alongside the code in the file itself.
 
@@ -29,3 +29,5 @@ These are general instructions for all shell scripts I will ask you to write. I 
 14. Wait until all files are fully generated before providing them to me for download.
 
 15. Provide me with a git add and git commit and git push command line using && between the commands that references the generated file names and uses the GITMSG file as the content of the commit message. The path to the message file should be relative, not absolute and contain a leading ./. Do not explain the command.
+
+16. Generate the bash code direclty. Do not use any intermeidate steps. Do not use python.
