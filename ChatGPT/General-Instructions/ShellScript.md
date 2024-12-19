@@ -9,8 +9,9 @@
 7. Add status message output as the script is working. Colorize the output, use red for errors and green for non error.
 8. Log all output to a file as well as standard out. Name the log file LOG-(PromptedScriptName)-MMDDYYYY-24hourtime.log. All log output to standard out and the log file should have timestamps in the format MM-DD-YYYY:24hourtime.
 9. Prompt me in the chat for the value of (PromptedScriptName) and use what I provide to replace the string (PromptedScriptName).
-10. Suffix all generated filenames with -MMDDYYYY-current 24hour time.txt
 11. Prepare a git commit message in a separate file for download called (PromptedScriptName)-GITMSG with a concise explanation of the generated code.
 12. Output the script code to a file for downloading called (PromptedScriptName).
 13. Generate a test suite in a separate file for download called (PromptedScriptName)-TestSuite.
+10. Suffix all generated filenames with the current date and time in the format -MMDDYYYY-current 24hour time.txt
 14. Provide me with a git add and git commit command line using && between them that references the generated file names and uses the GITMSG file as the content of the commit message. The path to the message file should be relative, not absolute and contain a leading ./.
+15. Wait until all files are fully generated before providing them to me.

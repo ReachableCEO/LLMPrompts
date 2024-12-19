@@ -1,5 +1,0 @@
-Added a bash script to interact with the Joplin API:
-- Reads environment variables from a file and validates them.
-- Finds a note by title, handling API pagination.
-- Clones the note into a new notebook with a new title.
-- Includes robust error handling and adheres to AGPL v3.0.

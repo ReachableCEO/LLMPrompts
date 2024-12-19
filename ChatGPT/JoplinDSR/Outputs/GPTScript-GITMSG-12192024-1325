@@ -1,1 +1,0 @@
-Added initial implementation of GPTScript. Includes environment variable validation, Joplin API interaction, note cloning, robust error handling, logging, and status messages.
