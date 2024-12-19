@@ -24,7 +24,7 @@ These are general instructions for all shell scripts I will ask you to write. I 
 
 12. Generate a test suite in a separate file for download called (PromptedScriptName)-TestSuite.
 
-13. Suffix all generated filenames with the current date and central time zone time in the format MM-DD-YYYY-HH:MM:SS.txt
+13. Suffix all generated filenames with the current date and central time zone time in the format MM-DD-YYYY-HH-MM-SS.txt
 
 14. Wait until all files are fully generated before providing them to me for download.
 
