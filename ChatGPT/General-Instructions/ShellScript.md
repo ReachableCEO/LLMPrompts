@@ -13,4 +13,4 @@
 11. Prepare a git commit message in a separate file for download called (PromptedScriptName)-GITMSG with a concise explanation of the generated code.
 12. Output the script code to a file for downloading called (PromptedScriptName).
 13. Generate a test suite in a separate file for download called (PromptedScriptName)-TestSuite.
-14. Provide me with a git commit command line that references the generated file names and uses the GITMSG file as the commit message.
+14. Provide me with a git commit command line that references the generated file names and uses the GITMSG file as the commit message. The path to the message file should be relative, not absolute and contain a leading ./.
