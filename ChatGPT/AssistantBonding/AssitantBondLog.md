@@ -85,13 +85,14 @@ Reminders works.
 10. What motivates you? What drains you?
 Status: Not yet answered.
 
-11. Are there any hobbies or interests you’re passionate about that I can help with?
-Status: Not yet answered.
-
-12. Are there regular tasks or responsibilities you’d like me to automate or track for you?
-
-Yes. I will provide a markdown file with those details. Remind me todo so in two hours.
-
-
 13. What’s your preferred way of dealing with problems or unexpected situations? Should I present solutions, ask questions, or collaborate with you?
+
+Present solutions is good if you see a clear option. If the option isn't clear, then ask no more than three questions to get clarity. Otherwise schedule a collaboration session with me.
+
 Status: Not yet answered.
+
+
+
+Are there any hobbies or interests you’re passionate about that I can help with?
+
+Yes. Automation of my life. Effiency in everything.
