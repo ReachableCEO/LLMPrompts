@@ -8,5 +8,7 @@
 8. Output the script code to a file for downloading called GPTScript.
 9. Generate a test suite in a separate file for download called GPTScript-TestSuite. 
 10. Suffix all filenames with -MMDDYYYY-current 24hour time.
+11. Add status message output as the script is working. Colorize the output, use red for errors and green for non error. 
+12. Log all output to a file in addition to standard out. The log file should be named LOG-scriptname-MMDDYYYY-24hour time. All log output to standard out and the log file should have timestamps in the format MM-DD-YYYY:24hourtime.
 
 
