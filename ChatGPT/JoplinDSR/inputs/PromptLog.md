@@ -107,6 +107,6 @@ The ShellScript.md file contains my instructions for all shell scripts I will as
 
 The JoplinDSR.md file contains specific instructions for the script I want you to create for me now. 
 
-Git hash:
+Git hash: 72562400452f30aa2cbf059c43ce39fead97c929
 
 Context: I completely cleared the ChatGPT memory and started from scratch.
