@@ -1,0 +1,69 @@
+#!/bin/bash
+
+# Copyright (C) 2025 ReachableCEO Enterprises LLC
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# Set bash strict mode for robust error handling
+set -euo pipefail
+IFS=$'\n\t'
+
+trap "echo 'An error occurred. Exiting.'; exit 1" ERR
+
+LOG_FILE="LOG-JoplinDSR-$(date +%m%d%Y-%H%M%S).log"
+exec > >(tee -a $LOG_FILE)
+exec 2> >(tee -a $LOG_FILE >&2)
+echo "$(date +%m-%d-%Y:%H:%M:%S) Script started."
+
+# External environment file (user-defined)
+ENV_FILE=""
+
+if [ -z "$ENV_FILE" ]; then
+    echo -e "\033[0;31m[ERROR] ENV_FILE is not set. Exiting.\033[0m"
+    exit 1
+fi
+
+# Load environment variables
+source "$ENV_FILE"
+
+# Ensure all required variables are not null
+: "${JOPLIN_HOST:?Environment variable JOPLIN_HOST is required.}"
+: "${JOPLIN_PORT:?Environment variable JOPLIN_PORT is required.}"
+: "${JOPLIN_SOURCE_NOTE_TITLE:?Environment variable JOPLIN_SOURCE_NOTE_TITLE is required.}"
+: "${JOPLIN_TARGET_NOTEBOOK:?Environment variable JOPLIN_TARGET_NOTEBOOK is required.}"
+
+function get_joplin_apikey()
+
+{
+
+    # Skeleton function to be populated by user
+    export JOPLIN_TOKEN=""
+}
+
+function clone_note()
+
+{
+
+    echo -e "\033[0;32m[INFO] Cloning note...\033[0m"
+    if [ -z "$JOPLIN_TOKEN" ]; then
+        echo -e "\033[0;31m[ERROR] JOPLIN_TOKEN is not set. Exiting.\033[0m"
+        exit 1
+    fi
+
+    # Retrieve source note ID
+    local NOTE_ID
+    NOTE_ID=$(curl -s "http://${JOPLIN_HOST}:${JOPLIN_PORT}/notes?token=${JOPLIN_TOKEN}&title=${JOPLIN_SOURCE_NOTE_TITLE}" | jq -r '.items[0].id')
+    
+    if [ -z "$NOTE_ID" ]; then
+        echo -e "\033[0;31m[ERROR] Source note not found. Exiting.\033[0m"
+        exit 1
+    fi
+
+    # Clone the note
+    local TARGET_NOTE_TITLE="DSR-$(date +%m-%d-%Y)"
+    curl -X POST "http://${JOPLIN_HOST}:${JOPLIN_PORT}/notes?token=${JOPLIN_TOKEN}"         -H "Content-Type: application/json"         -d @<(jq -n --arg title "$TARGET_NOTE_TITLE" --arg notebook "${JOPLIN_TARGET_NOTEBOOK}" --arg body "Cloned content"             '{title: $title, parent_id: $notebook, body: $body}')
+    
+    echo -e "\033[0;32m[INFO] Note cloned successfully.\033[0m"
+}

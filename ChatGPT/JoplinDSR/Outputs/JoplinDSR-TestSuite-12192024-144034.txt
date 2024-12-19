@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Test suite for JoplinDSR
+
+# Load script
+source ./JoplinDSR.sh
+
+# Test environment loading
+function test_env_loading()
+
+{
+
+    echo "Testing environment file loading..."
+}
+
+# Other test cases can be added
