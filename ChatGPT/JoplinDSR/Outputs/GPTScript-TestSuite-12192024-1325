@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Test Suite for GPTScript
+
+set -euo pipefail
+
+function test_script_execution()
+
+{
+
+    echo "Running script execution test..."
+    # Placeholder for testing script functionality
+    ./GPTScript || { echo "Script execution test failed."; exit 1; }
+    echo "Script execution test passed."
+}
+
+test_script_execution
