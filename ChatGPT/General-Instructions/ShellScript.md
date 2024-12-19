@@ -14,19 +14,18 @@ These are general instructions for all shell scripts I will ask you to write. I 
 
 7. Add status message output as the script is working. Colorize the output, use red for errors and green for non error.
 
-8. Log all output to a file as well as standard out. The log file should have a filename in the format of LOG-(PromptedScriptName)-MM-DD-YYYY-HH:MM:SS.log. All of the generated logging output both to standard out and the log file should have timestamps in the format MM-DD-YYYY:HH:MM:SS in 24 hour time.
+8. Log all output to a file as well as standard out. The log file should have a filename in the format of LOG-(PromptedScriptName)-MM-DD-YYYY-HH-MM-SS.log. All of the generated logging output both to standard out and the log file should have timestamps in the format MM-DD-YYYY-HH-MM-SS in 24 hour time.
 
 9. Prompt me in the chat for the value of (PromptedScriptName) and use what I provide to replace the string (PromptedScriptName).
 
-10. Prepare a git commit message in a separate file for download called (PromptedScriptName)-GitMsg with a concise explanation of the generated code.
+10. Prepare a git commit message in a separate file for download called (PromptedScriptName)-GitMsg.txt with a concise explanation of the generated code.
 
-11. Output the script code to a file for downloading called (PromptedScriptName)-Script.
+11. Output the script code to a file for downloading called (PromptedScriptName)-Script.sh.
 
-12. Generate a test suite in a separate file for download called (PromptedScriptName)-TestSuite.
+12. Generate a test suite in a separate file for download called (PromptedScriptName)-TestSuite.sh.
 
-13. Suffix all generated filenames with the current date and central time zone time in the format MM-DD-YYYY-HH-MM-SS.txt
+13. Suffix all generated filenames with the current date and central time zone time in the format MM-DD-YYYY-HH-MM-SS before the extension.
 
 14. Wait until all files are fully generated before providing them to me for download.
 
-15. Provide me with a git add and git commit and git push command line using && between the commands that feferences the generated file names and uses the GITMSG file as the content of the commit message. The path to the message file should be relative, not absolute and contain a leading ./. Do not explain the command.
-
+15. Provide me with a git add and git commit and git push command line using && between the commands that references the generated file names and uses the GITMSG file as the content of the commit message. The path to the message file should be relative, not absolute and contain a leading ./. Do not explain the command.

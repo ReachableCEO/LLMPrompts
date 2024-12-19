@@ -1,1 +1,0 @@
-Automated script for cloning notes using Joplin API with robust error handling and logging.

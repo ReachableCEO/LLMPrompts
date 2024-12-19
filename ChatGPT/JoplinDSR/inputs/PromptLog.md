@@ -51,14 +51,14 @@ I see the problem originates from the syntax handling of embedded double-quotes 
 It seems there was an issue with the variables for file paths. Let me redefine them and ensure the content is saved properly. ​
 ```
 
-- Issues with my instructions: 
+- Issues with my instructions:
 
   - Didn't create the git command.
   - Didn't format the file names correctly.
 
 Reprimand issued:
 
-- I am not happy. You didn't follow my instructions to output the git commands. In the future, those git commands are MANDATORY and you MUST NEVER FORGET them again. 
+- I am not happy. You didn't follow my instructions to output the git commands. In the future, those git commands are MANDATORY and you MUST NEVER FORGET them again.
 - I am still not happy. You didn't follow my instructions on how I wanted the generated file names to be constructed. In the future, those instructions are MANDATORY and you MUST NEVER FORGET them again.
 
-Updated transcript:  https://chatgpt.com/share/6764630f-06f4-8005-ae4f-b58d7d474423
+Updated transcript:  <https://chatgpt.com/share/6764630f-06f4-8005-ae4f-b58d7d474423>
