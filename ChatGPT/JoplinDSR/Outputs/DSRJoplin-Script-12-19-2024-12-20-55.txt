@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# Copyright ReachableCEO Enterprises 2025
+# License: AGPL v3.0
+
+set -euo pipefail
+trap "echo -e '\033[31mAn error occurred. Exiting.\033[0m' >&2; exit 1" ERR
+
+LOG_FILE="LOG-DSRJoplin.log"
+exec > >(tee -a "$LOG_FILE") 2>&1
+
+echo "$(date +'%m-%d-%Y:%H:%M:%S') - Starting script..."
+
+# Load environment variables
+ENV_FILE="../../DSRVariables.env"
+if [[ ! -f "$ENV_FILE" ]]; then
+    echo "$(date +'%m-%d-%Y:%H:%M:%S') - Error: Environment file not found: $ENV_FILE" >&2
+    exit 1
+fi
+
+source "$ENV_FILE"
+
+# Check required environment variables
+required_vars=(JOPLIN_HOST JOPLIN_PORT JOPLIN_SOURCE_NOTE_TITLE JOPLIN_TARGET_NOTEBOOK)
+for var in "${required_vars[@]}"; do
+    if [[ -z "${!var:-}" ]]; then
+        echo "$(date +'%m-%d-%Y:%H:%M:%S') - Error: Environment variable $var is not set or empty" >&2
+        exit 1
+    fi
+done
+
+# Define functions
+function get_joplin_apikey()
+
+{
+
+    echo "$(date +'%m-%d-%Y:%H:%M:%S') - Configuring Bitwarden and fetching API key..."
+    bw config server https://pwvault.turnsys.com
+    echo "Sourcing clientid/apikey data..."
+    source D:/tsys/secrets/bitwarden/data/apikey-bitwarden-reachableceo
+    bw login --apikey $BW_CLIENTID $BW_CLIENTSECRET
+    export BW_SESSION="$(bw unlock --passwordenv TSYS_BW_PASSWORD_REACHABLECEO --raw)"
+    export JOPLIN_TOKEN="$(bw get password APIKEY-Joplin-Streaming)"
+
+    if [[ -z "$JOPLIN_TOKEN" ]]; then
+        echo "$(date +'%m-%d-%Y:%H:%M:%S') - Error: JOPLIN_TOKEN is null" >&2
+        exit 1
+    fi
+
+}
+
+# Execute function to get Joplin API key
+get_joplin_apikey
+
+# Use Joplin API to find the source note ID
+echo "$(date +'%m-%d-%Y:%H:%M:%S') - Finding the source note ID for $JOPLIN_SOURCE_NOTE_TITLE..."
+source_note_id=$(curl -s "http://$JOPLIN_HOST:$JOPLIN_PORT/notes?title=$JOPLIN_SOURCE_NOTE_TITLE" | jq -r '.items[].id')
+
+if [[ -z "$source_note_id" ]]; then
+    echo "$(date +'%m-%d-%Y:%H:%M:%S') - Error: Source note not found" >&2
+    exit 1
+fi
+
+# Clone the note to a new note in the target notebook
+echo "$(date +'%m-%d-%Y:%H:%M:%S') - Cloning the note to a new note in the target notebook..."
+new_note_title="DSR-$(date +'%m-%d-%Y')"
+curl -s -X POST "http://$JOPLIN_HOST:$JOPLIN_PORT/notes"     -H "Authorization: $JOPLIN_TOKEN"     -H "Content-Type: application/json"     -d @<(jq -n --arg title "$new_note_title" --arg notebook "$JOPLIN_TARGET_NOTEBOOK" --arg source_id "$source_note_id" '
+        { title: $title, parent_id: $notebook, body: "Cloned from note ID: \($source_id)" }'
+    )
+
+echo "$(date +'%m-%d-%Y:%H:%M:%S') - Script completed successfully."

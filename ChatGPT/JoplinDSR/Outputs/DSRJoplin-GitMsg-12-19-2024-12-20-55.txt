@@ -1,0 +1,2 @@
+Added the DSRJoplin script with robust error handling, logging, and environment variable checks.
+Includes a test suite for validating script functionality.

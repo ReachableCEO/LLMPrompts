@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Test suite for DSRJoplin script
+
+echo "Running test suite for DSRJoplin script..."
+
+# Test: Environment file exists
+if [[ ! -f "../../DSRVariables.env" ]]; then
+    echo "Test failed: Environment file does not exist."
+    exit 1
+fi
+
+echo "Test passed: Environment file exists."
+
+# Test: Required environment variables are non-empty
+source "../../DSRVariables.env"
+required_vars=(JOPLIN_HOST JOPLIN_PORT JOPLIN_SOURCE_NOTE_TITLE JOPLIN_TARGET_NOTEBOOK)
+for var in "${required_vars[@]}"; do
+    if [[ -z "${!var:-}" ]]; then
+        echo "Test failed: Environment variable $var is not set or empty."
+        exit 1
+    fi
+done
+
+echo "Test passed: All required environment variables are set."
+
+# Test: get_joplin_apikey function
+if ! ./DSRJoplin-Script.sh; then
+    echo "Test failed: Script execution failed."
+    exit 1
+fi
+
+echo "Test passed: Script executed successfully."
+
+echo "All tests completed."
