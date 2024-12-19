@@ -6,6 +6,7 @@
     - [Second attempt](#second-attempt)
     - [Third attempt](#third-attempt)
     - [Fourth attempt](#fourth-attempt)
+    - [Fifth attempt](#fifth-attempt)
 
 # Prompt log
 
@@ -91,4 +92,21 @@ I have attached two markdown files with highly detailed instructions on a shell 
 
 It followed my instructions exactly. Now to test out the code.
 
-Used a new git hash: 
+Used a new git hash:  d397b0842eec4d352ab45f962c0093bd9b6ba13c 
+
+
+### Fifth attempt
+
+Prompt:
+
+I am a very busy executive. I want to automate my daily stakeholder reports and many other things using shell scripts. I use software called Joplin to manage my life. 
+
+The attached files have two sets of instructions. 
+
+The ShellScript.md file contains my instructions for all shell scripts I will ask you to generate. Store the instructions in your long term memory. Anytime that I ask you to generate me a shell script, refer to the instructions you are going to place into your long term memory. 
+
+The JoplinDSR.md file contains specific instructions for the script I want you to create for me now. 
+
+Git hash:
+
+Context: I completely cleared the ChatGPT memory and started from scratch.

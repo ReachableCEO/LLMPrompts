@@ -5,6 +5,7 @@ Write a bash shell script using shell functions that:
 Includes a function called get_joplin_apikey that contains the following code
 
 ```
+bw logout
 bw config server https://pwvault.turnsys.com
 echo "Sourcing clientid/apikey data..."
 source D:/tsys/secrets/bitwarden/data/apikey-bitwarden-reachableceo
