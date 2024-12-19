@@ -4,6 +4,7 @@
   - [Prompts](#prompts)
     - [First attempt](#first-attempt)
     - [Second attempt](#second-attempt)
+    - [Third attempt](#third-attempt)
 
 # Prompt log
 
@@ -75,3 +76,12 @@ Updated transcript:  <https://chatgpt.com/share/6764630f-06f4-8005-ae4f-b58d7d47
 - [Transcript](https://chatgpt.com/share/67646dd2-09ec-8005-9821-22ed9a9e193a)
 
 - Feedback: None. It followed my instructions exactly this time.
+
+### Third attempt
+
+- Git hash:
+- Date/time: 12-19-2024 14:00
+
+- Prompt:
+
+I have attached two markdown files with highly detailed instructions on a shell script and associated files I want you to create for me. Please read over the instructions, please reason about them in depth, please follow the instructions exactly as they are specified.
