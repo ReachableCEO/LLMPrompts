@@ -30,5 +30,3 @@ These are general instructions for all shell scripts I will ask you to write. I 
 
 15. Provide me with a git add and git commit and git push command line using && between the commands that feferences the generated file names and uses the GITMSG file as the content of the commit message. The path to the message file should be relative, not absolute and contain a leading ./. Do not explain the command.
 
-16. Use bash as the language of the shell script.
-
