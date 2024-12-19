@@ -1,6 +1,6 @@
 # Specific instructions for this shell script
 
-Write a bash script using functions that:
+Write a bash shell script using shell functions that:
 
 Has a skeleton function called get_joplin_apikey that I will add my own secrets management code to. The function should export the variable JOPLIN_TOKEN.
 
