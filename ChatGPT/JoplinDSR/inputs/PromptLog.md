@@ -2,7 +2,8 @@
 - [Prompt log](#prompt-log)
   - [Introduction](#introduction)
   - [Prompts](#prompts)
-    - [First attempt - input](#first-attempt---input)
+    - [First attempt](#first-attempt)
+    - [Second attempt](#second-attempt)
 
 # Prompt log
 
@@ -20,7 +21,7 @@ I am logging :
 
 ## Prompts
 
-### First attempt - input
+### First attempt
 
 - [Transcript 1](https://chatgpt.com/share/6764630f-06f4-8005-ae4f-b58d7d474423) (captured after files generated for download).
 
@@ -62,3 +63,13 @@ Reprimand issued:
 - I am still not happy. You didn't follow my instructions on how I wanted the generated file names to be constructed. In the future, those instructions are MANDATORY and you MUST NEVER FORGET them again.
 
 Updated transcript:  <https://chatgpt.com/share/6764630f-06f4-8005-ae4f-b58d7d474423>
+
+### Second attempt
+
+- Git hash: 11e558465dda5358fad710b247704f912f72d1d1
+
+- Thoughts/tweaks: none
+
+- Prompt: Follow the instructions in the attached markdown files.
+
+- Transcript:
