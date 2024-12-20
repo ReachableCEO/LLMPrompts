@@ -1,0 +1,9 @@
+title: "ChatGPT Generated PDF"
+titlepage: true
+toc: true
+toc-own-page: true
+header-left: "\\hspace{1cm}"
+header-center: "\\leftmark"
+header-right: "Page \\thepage"
+footer-center: "Candor. Consistency. Completeness."
+urlcolor: blue
