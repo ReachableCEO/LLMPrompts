@@ -21,7 +21,7 @@ JOPLIN_PORT
 JOPLIN_SOURCE_NOTE_TITLE
 JOPLIN_TARGET_NOTEBOOK
 
-The external file needs to be a variable in the shell script and must not be null. The value of the variable should be set to ../../DSRVariables.env. Place the variable and the variable checking code at the top of the script.
+The external file needs to be a variable in the shell script and must not be null. The value of the variable should be set to ../DSRVariables.env. Place the variable and the variable checking code at the top of the script.
 
 Ensure the value of JOPLIN_TOKEN is not null.
 Use the Joplin API and Find the ID of the JOPLIN_SOURCE_NOTE_TITLE . Make sure to handle the pagination of the API output.
