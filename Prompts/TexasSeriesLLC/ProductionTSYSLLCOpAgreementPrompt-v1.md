@@ -32,6 +32,6 @@ The contract requirements are as follows:
 - The sub committee will be governed by a charter that is separate from the operating agreement but referenced in the operating agreement.
 - Include provisions for over riding every part of the relevant business organizations code as allowed by law.  
 - Specify that the series enters into a contract with Known Element Enterprises as the provider of IT and business operations services. 
-- Specify the series name as {{LLCSeriesNsme}} LLC.
+- Specify the series name as {{LLCSeriesName}} LLC.
 - Include a markdown table with five rows and two columns. The first column name will be Member Legal Name and the second column name will be Ownership Percentage. 
 - The operating agreement will be for an individual series of a series LLC that is member managed and board governed. 
