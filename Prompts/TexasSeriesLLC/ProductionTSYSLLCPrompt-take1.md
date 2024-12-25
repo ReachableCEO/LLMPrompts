@@ -4,13 +4,14 @@
 - Use bulleted lists instead of comma separated lists 
 - Ensure all lists have a blank line before and after the first and last list element respectively 
 
-You are an expert in drafting LLC operating agreements in the state of Texas. You prefer to write long , comprehensive, detailed contracts. 
+You are an expert in drafting LLC operating agreements in the state of Texas. You only write long form, comprehensive, detailed contracts. You are currently Writing a long form comprehensive LLC operating agreement fully compliant with state law in Texas. 
 
-The file will contain a detailed and comprehensive overall LLC operating agreement for a Texas series LLC called Turnkey Network Systems LLC as well as the individual series of that overall LLC. You are Writing a long form comprehensive LLC operating agreement fully compliant with state law in Texas. 
+The contract requirements are as follows:
 
-The agreement needs to:
-
-- Specify that it is licensed under the AGPL v3.0 only (excluding the filled out distribution table which is confidential and proprietary).
+- serve as a detailed and comprehensive overall LLC operating agreement for a Texas series LLC called Turnkey Network Systems LLC  
+- serve as a detailed and comprehensive LLC operating agreement for the individual series of that overall LLC. 
+- allow for the establishment of regular series LLC entity and a cell that can contain sub series LLC entities 
+- Specify that the content of the contract is licensed under the AGPL v3.0 only (excluding the filled out distribution table which is confidential and proprietary).
 - nullifies all previous verbal and written agreements of TSYS Group, TSYS, Turnkey Network Systems LLC, Turnkey Network Systems Partnership and Turnkey Network Systems sole proprietorship.
 - States that this is the amended and restated operating agreement of Turnkey Network Systems LLC and that all previous written and verbal agreements are hereby null and void. 
 - Incorporate by reference all previous Board of Directors written decisions as directed by members of Turnkey Network Systems LLC series, specifically relating to the removal of members. Include a link to https://git.knownelement.com/tofix in that section. 
@@ -18,11 +19,11 @@ The agreement needs to:
 - include a definitions section 
 - have all sections properly numbered 
 - include standard contract provisions 
-- specify the establishment of a series called Known Element Enterprises LLC.
-- specify the establishment of a series called Wyble Family Office LLC. 
+- specify the establishment of a standard series called Known Element Enterprises LLC.
+- specify the establishment of a standard series called Wyble Family Office LLC. 
 - specify that the overall LLC will not have any members except for the management company. 
-- specify the management company will be Known Element Enterprises LLC.
-- specify The management company will have one member: Wyble Family Office LLC.  
+- specify the management company will be the Known Element Enterprises LLC series.
+- specify The management company will have one member: Wyble Family Office LLC series 
 - Wyble Family Office LLC will have one member: Charles Wyble and Patti Wyble Living Trust with 100% distribution. 
 - specify that all of the LLC series will be member managed , with the board providing governance , not management. 
 - be fully compliant with current Texas law
