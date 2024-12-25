@@ -11,6 +11,9 @@ The contract requirements are as follows:
 - serve as a detailed and comprehensive overall LLC operating agreement for a Texas series LLC called Turnkey Network Systems LLC  
 - serve as a detailed and comprehensive LLC operating agreement for the individual series of that overall LLC. 
 - allow for the establishment of regular series LLC entity and a cell that can contain sub series LLC entities 
+- Ensure a provision exists in the agreement for the establishment of series. 
+- Ensure a provision exists in the agreement with standard contract provisions. 
+- Specify that all series created under the LLC must use Known Element Enterprises LLC as the sole vendor for IT and business operations services and that any exceptions must be approved by the board. 
 - Specify that the content of the contract is licensed under the AGPL v3.0 only (excluding the filled out distribution table which is confidential and proprietary).
 - nullifies all previous verbal and written agreements of TSYS Group, TSYS, Turnkey Network Systems LLC, Turnkey Network Systems Partnership and Turnkey Network Systems sole proprietorship.
 - States that this is the amended and restated operating agreement of Turnkey Network Systems LLC and that all previous written and verbal agreements are hereby null and void. 
